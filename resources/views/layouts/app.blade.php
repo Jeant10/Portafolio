@@ -21,10 +21,10 @@
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
-            <div class="container">
-                <a class="navbar-brand" href="{{ url('/') }}">
-                    {{ config('app.name', 'Laravel') }}
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container px-4 px-lg-5">
+                <a class="navbar-brand">
+                    Bienvenido
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
@@ -53,8 +53,13 @@
                             @endif
                         @else
 
+
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('portafolio') }}">Portafolio</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ url('/') }}">Home</a>
                         </li>
 
                             <li class="nav-item dropdown">
@@ -79,7 +84,6 @@
                 </div>
             </div>
         </nav>
-
         <main class="py-4">
             @yield('content')
         </main>

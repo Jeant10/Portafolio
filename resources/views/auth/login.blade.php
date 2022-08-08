@@ -64,10 +64,23 @@
                                 @endif
                             </div>
                         </div>
+
+                        <div class="row mb-0 offset-md-5">
+                            <a class="col-md-6 my-3" href="/">
+                                <button class="btn btn-primary">
+                                    <span class="iconify" data-icon="logos:facebook" data-width="25" data-height="20">
+                                    </span> Log in with Facebook
+                                </button>
+                            </a>
+                        </div>
+                    
                     </form>
                 </div>
             </div>
         </div>
     </div>
 </div>
+
+<script src="https://code.iconify.design/2/2.2.1/iconify.min.js"></script>
+
 @endsection

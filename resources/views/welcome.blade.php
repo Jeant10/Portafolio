@@ -1,6 +1,8 @@
 @extends('layouts.template')
 
+
 @section('content')
+
 <!-- Portfolio Grid Items-->
 @forelse ($portafolios as $portafolio)
 

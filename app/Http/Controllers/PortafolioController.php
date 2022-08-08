@@ -5,7 +5,6 @@ namespace App\Http\Controllers;
 use App\Models\Portafolio;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
-use Illuminate\Support\Facades\Storage\URL;
 
 class PortafolioController extends Controller
 {
@@ -31,7 +30,6 @@ class PortafolioController extends Controller
     }
 
 
-    
 
     /**
      * Show the form for creating a new resource.
@@ -61,7 +59,6 @@ class PortafolioController extends Controller
             'required'=>'El campo :attribute es obligatorio',
             'imagen.mimes'=>'La imagen debe ser de tipo: jpge, png, jpg.',
         ]);
-
 
 
         Portafolio::create([
@@ -99,7 +96,6 @@ class PortafolioController extends Controller
         $portafolio = Portafolio::find($id);
 
         return view('portafolio.edit',compact('portafolio'));
-
 
     }
 
@@ -139,7 +135,6 @@ class PortafolioController extends Controller
     }
 
 
-
     /**
      * Remove the specified resource from storage.
      *
@@ -148,8 +143,8 @@ class PortafolioController extends Controller
      */
     public function destroy(Portafolio $portafolio)
     {
+        $portafolio->delete();
         Storage::disk('dropbox')->delete($portafolio->getUrl());
-        $portafolio ->delete();
         return redirect()->route('portafolio');
     }
 

@@ -7,7 +7,8 @@
             <div class="card">
                 <div class=" card-header card-body d-flex justify-content-between align-items-center">
                     Gestión de Portafolios
-                    <a  class="btn btn-primary btn-sm" href="{{route('create')}}">Crear</a>
+                <a  class="btn btn-primary btn-sm" href="{{route('create')}}">Crear</a>
+                </div>
             </div>
         </div>
     </div>
@@ -31,9 +32,9 @@
             @empty
                 <p>No Existen proyectos</p>
             @endforelse
-        @endsection
     </div>
 </div>
+@endsection
 
 
 

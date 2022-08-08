@@ -92,6 +92,6 @@
     </div>
     <br>
 
-    @endsection
+@endsection
 
 

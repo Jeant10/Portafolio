@@ -4,10 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Support\Facades\Storage\URL;
 use Illuminate\Support\Facades\Storage;
-
-
 
 class Portafolio extends Model
 {
@@ -23,8 +20,8 @@ class Portafolio extends Model
 
     public function getUrl()
     {
+
         return Storage::disk('dropbox')->url($this->imagen);
     }
-
 
 }

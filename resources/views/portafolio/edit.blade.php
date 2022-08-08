@@ -55,6 +55,6 @@
     </div>
     <br>
 
-    @endsection
+@endsection
 
 
